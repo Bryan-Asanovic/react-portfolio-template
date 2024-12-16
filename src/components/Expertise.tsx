@@ -1,44 +1,38 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faJs, faGithubSquare, faMicrosoft } from '@fortawesome/free-brands-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
-const labelsFirst = [
-    "React",
-    "TypeScript",
+const labelsBackend = [
+    "C#",
+    ".NET",
+    "ASP.NET",
+    "PHP",
+    "Entity Framework",
+    "SQL Server",
+    "REST API",
+    "Azure"
+];
+
+const labelsFrontend = [
     "JavaScript",
+    "TypeScript",
+    "React",
     "HTML5",
     "CSS3",
-    "SASS",
-    "Flask",
-    "Python",
-    "SQL",
-    "PostgreSQL",
-    "Postman"
+    "Babel"
 ];
 
-const labelsSecond = [
+const labelsProjectManagement = [
     "Git",
-    "GitHub Actions",
-    "Docker",
-    "AWS",
-    "Azure",
-    "Linux",
-    "Snowflake",
-    "Pandas",
-    "Selenium",
-];
-
-const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
+    "GitHub",
+    "DevOps",
+    "Azure DevOps",
+    "Agile",
+    "Scrum",
+    "Kanban"
 ];
 
 function Expertise() {
@@ -48,36 +42,36 @@ function Expertise() {
             <h1>Expertise</h1>
             <div className="skills-grid">
                 <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
+                    <FontAwesomeIcon icon={faMicrosoft} size="3x"/>
+                    <h3>Backend Development</h3>
+                    <p>I specialize in building robust and scalable backend systems using C# and .NET technologies. My expertise includes designing and implementing RESTful APIs, working with databases, and deploying applications to the cloud.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
-                        {labelsFirst.map((label, index) => (
+                        {labelsBackend.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
                 </div>
 
                 <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
+                    <FontAwesomeIcon icon={faJs} size="3x"/>
+                    <h3>Frontend Development</h3>
+                    <p>I create dynamic and responsive user interfaces using modern JavaScript frameworks and libraries. My skills include building single-page applications, optimizing performance, and ensuring cross-browser compatibility.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
-                        {labelsSecond.map((label, index) => (
+                        {labelsFrontend.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
                 </div>
 
                 <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
+                    <FontAwesomeIcon icon={faGithubSquare} size="3x"/>
+                    <h3>Project Management & DevOps</h3>
+                    <p>I have extensive experience in managing projects and implementing DevOps practices to streamline development workflows. I ensure continuous integration and delivery, automate deployments, and maintain high-quality standards.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
-                        {labelsThird.map((label, index) => (
+                        {labelsProjectManagement.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
